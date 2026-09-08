@@ -1,0 +1,8 @@
+Sep 08 10:15:21 server sshd[1234]: Failed password for root from 192.168.1.50 port 54321 ssh2
+Sep 08 10:15:35 server sshd[1235]: Failed password for admin from 192.168.1.50 port 54322 ssh2
+Sep 08 10:16:02 server sshd[1236]: Failed password for root from 192.168.1.50 port 54323 ssh2
+Sep 08 10:16:45 server sshd[1237]: Accepted password for user from 192.168.1.20 port 50000 ssh2
+Sep 08 10:17:10 server sshd[1238]: Failed password for root from 10.0.0.25 port 60001 ssh2
+Sep 08 10:17:25 server sshd[1239]: Failed password for root from 192.168.1.50 port 54324 ssh2
+Sep 08 10:18:01 server sshd[1240]: Failed password for admin from 192.168.1.50 port 54325 ssh2
+Sep 08 10:19:15 server sshd[1241]: Failed password for ubuntu from 10.0.0.25 port 60002 ssh2
