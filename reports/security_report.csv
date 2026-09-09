@@ -1,0 +1,6 @@
+Type,Value,Attempts
+User,root,4
+User,admin,2
+User,ubuntu,1
+IP,192.168.1.50,5,FLAGGED
+IP,10.0.0.25,2

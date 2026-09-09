@@ -2,6 +2,8 @@
 
 import re
 import matplotlib.pyplot as plt
+import csv
+import json
 
 
 log_file = "../logs/sample_auth.log"
@@ -94,4 +96,30 @@ if ip_counts:
     plt.savefig(chart_path)
     print(f"Chart saved to {chart_path}")
 
-    
+# Export results as CSV
+csv_path = "../reports/security_report.csv"
+with open(csv_path, "w", newline="") as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(["Type", "Value", "Attempts"])
+    for user, count in user_counts.items():
+        writer.writerow(["User", user, count])
+    for ip, count in ip_counts.items():
+        flag = "FLAGGED" if count >= BRUTE_FORCE_THRESHOLD else ""
+        writer.writerow(["IP", ip, count, flag] if flag else ["IP", ip, count])
+
+print(f"CSV report saved to {csv_path}")
+
+# Export results as JSON
+json_path = "../reports/security_report.json"
+report_data = {
+    "total_failed_attempts": total_failed,
+    "targeted_users": user_counts,
+    "suspicious_ips": ip_counts,
+    "brute_force_detected": brute_force_detected,
+    "threshold_used": BRUTE_FORCE_THRESHOLD
+}
+with open(json_path, "w") as json_file:
+    json.dump(report_data, json_file, indent=4)
+
+print(f"JSON report saved to {json_path}")
+

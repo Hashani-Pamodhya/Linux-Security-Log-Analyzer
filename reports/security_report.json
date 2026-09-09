@@ -1,0 +1,14 @@
+{
+    "total_failed_attempts": 7,
+    "targeted_users": {
+        "root": 4,
+        "admin": 2,
+        "ubuntu": 1
+    },
+    "suspicious_ips": {
+        "192.168.1.50": 5,
+        "10.0.0.25": 2
+    },
+    "brute_force_detected": true,
+    "threshold_used": 5
+}

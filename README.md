@@ -18,6 +18,7 @@ A Python tool that parses Linux SSH authentication logs to detect failed login a
 - Interactive brute-force threshold input
 - Graceful handling of missing log files
 - Generates a bar chart visualizing top attacking IPs
+- Exports results as CSV and JSON for further analysis
 
 ## Tech Stack
 - Python 3
