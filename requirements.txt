@@ -1,0 +1,3 @@
+# No external dependencies yet.
+# This project currently uses only Python's built-in modules.
+# Future dependencies (e.g. matplotlib for charts) will be listed here.
