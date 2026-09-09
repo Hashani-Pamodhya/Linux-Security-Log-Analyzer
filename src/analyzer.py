@@ -1,6 +1,8 @@
 # Linux Security Log Analyzer
 
 import re
+import matplotlib.pyplot as plt
+
 
 log_file = "../logs/sample_auth.log"
 report_file = "../reports/security_report.txt"
@@ -75,3 +77,21 @@ with open(report_file, "w") as out:
     out.write(report_text)
 
 print(f"\nReport saved to {report_file}")
+
+# Generate a bar chart of top attacking IPs
+if ip_counts:
+    ips = list(ip_counts.keys())
+    counts = list(ip_counts.values())
+
+    plt.figure(figsize=(8, 5))
+    plt.bar(ips, counts, color="crimson")
+    plt.title("Failed Login Attempts by IP Address")
+    plt.xlabel("IP Address")
+    plt.ylabel("Number of Attempts")
+    plt.tight_layout()
+
+    chart_path = "../reports/ip_attack_chart.png"
+    plt.savefig(chart_path)
+    print(f"Chart saved to {chart_path}")
+
+    

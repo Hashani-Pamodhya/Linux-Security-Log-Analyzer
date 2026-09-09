@@ -4,6 +4,9 @@
 
 A Python tool that parses Linux SSH authentication logs to detect failed login attempts, identify targeted usernames, flag suspicious repeated IP addresses, and highlight possible brute-force attacks. Generates a clean, readable security summary report.
 
+## Attack Visualization
+![Failed login attempts by IP](reports/ip_attack_chart.png)
+
 ## Features
 - Parses Linux `auth.log` style SSH entries
 - Counts total failed login attempts
@@ -11,6 +14,10 @@ A Python tool that parses Linux SSH authentication logs to detect failed login a
 - Tracks which IP addresses are responsible for attempts
 - Flags IP addresses exceeding a brute-force threshold
 - Saves a formatted report to `reports/security_report.txt`
+- Uses regex for robust log parsing
+- Interactive brute-force threshold input
+- Graceful handling of missing log files
+- Generates a bar chart visualizing top attacking IPs
 
 ## Tech Stack
 - Python 3
