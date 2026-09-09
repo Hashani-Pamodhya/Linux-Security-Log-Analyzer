@@ -1,0 +1,17 @@
+=====================================
+      LINUX SECURITY LOG REPORT
+=====================================
+
+Total Failed Login Attempts: 7
+
+Targeted Users:
+root      : 4 attempts
+admin     : 2 attempts
+ubuntu    : 1 attempts
+
+Suspicious IP Addresses:
+192.168.1.50   : 5 attempts  <-- FLAGGED
+10.0.0.25      : 2 attempts
+
+Possible Brute Force Attack Detected!
+=====================================
